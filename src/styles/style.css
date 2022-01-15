@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Londrina+Solid&family=Orelega+One&family=Poiret+One&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.content {
+    display: flex;
+    align-items: flex-end;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    animation: page-load-animation once .75s;
+    transform: translateY(-90px);
+}
+
+/* Photo by San Engineer from Pexels */
+.logo {
+    font-size: 52px;
+    color: white;
+    font-family: 'Changa One', cursive;
+    margin-bottom: 20px;
+}
+
+.dimension {
+    width: 500px;
+    min-width: 280px;
+}
+
+.image {
+    border-radius: 22px;
+    background-size: contain;
+    background-image: url('/public/bg.jpg');
+    height: 500px;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.text {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    color: black;
+    text-shadow: rgb(0 0 0 / 26%) 0px 1.20486px 4.25917px;
+}
+
+.bars {
+    width: 500px;
+}
+
+.bar {
+    font-weight: 900;
+    text-align: right;
+    font-size: 18px;
+    width: 100%;
+    height: 80px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(100, 100, 100);
+    padding: 20px;
+}
+
+.bar:first-child {
+    background-color: rgb(31, 31, 31);
+}
+
+.bar a {
+    color: white;
+}
+
+.bar:last-child a {
+    color: black;
+}
+
+.bar:nth-child(2) {
+    transform: translateY(-30px);
+}
+
+.bar:last-child {
+    color: black;
+    background-color: rgb(218, 218, 218);
+    transform: translateY(-60px);
+    padding: 10px 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 500px;
+    padding: 0px 20px;
+}
+
+.container div {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    margin-bottom: 10px;
+    border-radius: 22px;
+}
+
+.image-container1 {
+    background-image: url('/public/logo.png');
+}
+
+.image-container2 {
+    background-image: url('/public/freelancer.jpg');
+}
+
+.image-container3 {
+    background-image: url('/public/developer.jpg');
+}
+
+@keyframes page-load-transition {
+    from {
+        opacity: 0;
+        transform: translateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0deg);
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .content {
+        margin-top: 20px;
+        margin-bottom: 500px;
+        transform: translateY(0px);
+    }
+
+    .left {
+        margin-bottom: 90px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content{
+        margin-top: 0px;
+        margin-bottom: 140px;
+        transform: scale(0.6) translateY(-160px);
+    }
+}
